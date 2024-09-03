@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="avatar_pfp.jpg" type="image/x-icon">
     <title>Encrypted</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <div class="header-item left-collapse-btn">
+            <span class="icon material-symbols-outlined">Apps</span>
+            <span class="tooltip" role="tooltip">Menu</span>
+        </div>
+        <div class="header-item">
+            <a class="location" href="./index.html" target="_self">Dashboard</a>
+        </div>
+        <div class="header-item search">
+            <form class="search-form" id="search-form">
+                <label for="search-form">
+                    <button class="search-icon" type="submit">
+                        <span class="icon material-symbols-outlined">Manage_Search</span>
+                    </button>
+                    <input class="search-input" type="text" placeholder="Search blog articles">
+                    <button class="search-close" type="reset">
+                        <span class="icon material-symbols-outlined">Close</span>
+                        <span class="tooltip" role="tooltip">Clear</span>
+                    </button>
+                    <div class="search-background"></div>
+                </label>
+            </form>
+        </div>
+        
+        <div class="header-item messages">
+            <span class="icon material-symbols-outlined">Edit_Square</span>
+            <span class="tooltip" role="tooltip">Compose</span>
+        </div>
+
+        <div class="header-item notifications">
+            <span class="icon material-symbols-outlined">Notifications</span>
+            <span class="tooltip" role="tooltip">Notifications</span>
+        </div>
+        <div class="header-item help">
+            <span class="icon material-symbols-outlined">Help</span>
+            <span class="tooltip" role="tooltip">Help</span>
+        </div>
+        <div class="header-item account">
+            <img class="account-avatar" src="avatar_pfp.jpg" alt="avatar_logo">
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <aside class="left-menu">
+                <article>
+                    <h1 data-content="home"><span>Encrypted.</span></h1>
+                    <p data-content="about"><span>About Us</span></p>
+                </article>
+            </aside>
+            
+            <aside class="right-content">
+                <article data-content="article_01">
+                    <h1>The Art of Connection</h1>
+                    <p><span>By Anonymous</span></p>
+                </article>
+        
+                <article data-content="article_02">
+                    <h1>Beyond the Obstacle</h1>
+                    <p><span>By Anonymous</span></p>
+                </article>
+        
+                <article data-content="article_03">
+                    <h1>Growth Unlock</h1>
+                    <p><span>By Anonymous</span></p>
+                </article>
+        
+                <article data-content="article_04">
+                    <h1>Collaboration Magic</h1>
+                    <p><span>By Anonymous</span></p>
+                </article>
+        
+                <article data-content="article_05">
+                    <h1>Teamwork Triumphs</h1>
+                    <p><span>By Anonymous</span></p>
+                </article>
+                
+            </aside>
     
+        </section>
+    </main>
+
 </body>
 </html>
