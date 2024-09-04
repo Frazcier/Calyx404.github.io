@@ -4,8 +4,8 @@
 
     /* COLOR */
     
-    --clr-max-lt: #F5F3F1;
-    --clr-max-dk: #EDEBE9;
+    --clr-max-lt: #fff;
+    --clr-max-dk: #F2F2F2;
     --clr-min-lt: #6d6466;
     --clr-min-dk: #151515;
 
@@ -253,7 +253,7 @@ section {
     }
 
     &::-webkit-scrollbar-thumb {
-        background: var(--clr-min-lt);
+        background: var(--clr-max-dk);
         border-radius: var(--sz-micro);
         background-clip: padding-box;
         transition: var(--trsn-base);
