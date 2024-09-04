@@ -160,10 +160,21 @@ header {
             margin-right: var(--sz-base);
         }
         
-        &:last-child > img {
-            height: var(--sz-h2);
-            border-radius: 100%;
-            aspect-ratio: 1/1;
+        &:last-child {
+
+            & > img {
+                height: var(--sz-h2);
+                border-radius: 100%;
+                aspect-ratio: 1;
+            }
+
+            & > .tooltip {
+                right: var(--sz-h5);
+
+                &::after {
+                    right: 22.5%;
+                }
+            }
         }
     }
 
