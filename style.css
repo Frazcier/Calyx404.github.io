@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 :root {
 
@@ -44,11 +44,11 @@ html {
 }
 
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Garamond', serif;
     font-size: var(--sz-default);
     font-weight: 400;
     color: var(--clr-min-dk);
-    line-height: var(--sz-micro);
+    line-height: 1;
     margin: 0;
     padding:0;
     background: var(--clr-max-lt);
@@ -56,11 +56,37 @@ body {
 }
 
 h1 {
-    font-size: var(--sz-h4);
+    font-size: var(--sz-h3);
+    margin: 0 !important;
 }
 
-p > span {
+.upper {
     text-transform: uppercase;
+}
+
+.line {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none !important;
+    transition: var(--trsn-base);
+    height: auto;
+    padding: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -5px;
+        left: 0;
+        background: var(--clr-min-dk);
+        transition: all 0.25s ease-out;
+    }
+    
+    &:hover::after {
+        width: 100%;
+      }
 }
 
 header {
@@ -75,7 +101,7 @@ header {
     position:fixed;
     z-index: 10;
     display: grid;
-    grid-template-columns: 4% 12% auto 4% 4% 4% 4%;
+    grid-template-columns: 4% 8% auto 2.6% 2.6% 2.6% 4.5%;
     gap: var(--sz-micro);
 
     .header-item {
@@ -112,12 +138,10 @@ header {
             }
         }
 
-        &:hover {
-            & > .tooltip {
+        &:hover > .tooltip {
                 visibility: visible;
                 opacity: 1;
                 transform: translateY(0);
-            }
         }
 
         &:first-child{
@@ -126,7 +150,7 @@ header {
                 left: var(--sz-h5);
 
                 &::after {
-                    left: 22.5%;
+                    left: 30%;
                 }
             }
         }
@@ -137,14 +161,10 @@ header {
             justify-content: start;
 
             & > a.location {
-                text-decoration: none;
-                font-size: var(--sz-h6);
-                color: var(--clr-min-lt);
-
-                &:hover {
-                    color: var(--clr-min-dk);
-                    text-decoration: underline;
-                }
+                text-decoration: none !important;
+                font-size: var(--sz-h5);
+                font-weight: 600;
+                color: var(--clr-min-dk);
             }
         }
 
@@ -172,7 +192,7 @@ header {
                 right: var(--sz-h5);
 
                 &::after {
-                    right: 22.5%;
+                    left: 57.5%;
                 }
             }
         }
@@ -210,14 +230,13 @@ header {
             'wght' 300,
             'GRAD' 0,
             'opsz' 24;
-
+        
         &:hover {
-            color: var(--clr-min-dk);
+            color: var(--clr-min-dk) !important;
         }
     }
 
 }
-
 
 main {
     width: 100vw;
@@ -277,16 +296,26 @@ aside {
 
         & > article {
             width: 100%;
+            margin-bottom: 1rem;
         }
     }
 
     &.right-content {
         flex: 1;
-        row-gap: var(--sz-giga);
+        row-gap: 4.5rem;
 
         & article {
             width: 100%;
             padding: 0 var(--sz-milli);
+
+            & > .upper {
+                margin-top: 2rem;
+
+                &.author {
+                    margin-top: 1.8rem;
+                }
+            }
+
         }
     }
 }

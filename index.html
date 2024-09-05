@@ -2,76 +2,189 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="shortcut icon" href="avatar_pfp.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../avatar_pfp.jpg type="image/x-icon">
     <title>Encrypted</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="search.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
-    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script defer src="script.js"></script>
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(#F2F2F2, #151515, #F2F2F2);
+            z-index: 100;
+            opacity: 1;
+            transition: all 1s ease;
+        }
+
+        .container-hide {
+            opacity: 0 !important;
+        }
+
+        .container p {
+            font-family: 'Garamond', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 10rem 0 0 0;
+            position: absolute;
+        }
+
+        .loading {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            background: transparent;
+            animation: spin 2s linear infinite;
+            animation-direction: reverse;
+            aspect-ratio: 1;
+            object-fit: contain;
+        }
+
+        .shape {
+            display: block;
+            position: absolute;
+            height: 20px;
+            width: 40px;
+            background: #fff;
+            mix-blend-mode: exclusion;
+            -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+        }
+
+        .shape.shape-1 {
+            animation: spin1 2s ease-in-out infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .shape.shape-2 {
+            animation: spin2 2s ease-in-out infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .shape.shape-3 {
+            animation: spin3 2s ease-in-out infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .shape.shape-4 {
+            animation: spin4 2s ease-in-out infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .shape.shape-1 {
+            top: 20px;
+            left: 40px;
+        }
+
+        .shape.shape-2 {
+            right: 20px;
+            top: 40px;
+            width: 20px;
+            height: 40px;
+        }
+
+        .shape.shape-3 {
+            bottom: 20px;
+            left: 40px;
+        }
+
+        .shape.shape-4 {
+            left: 20px;
+            top: 40px;
+            width: 20px;
+            height: 40px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translateY(0);
+                transform: rotate(-90deg);
+            }
+
+            50% {
+                transform: translateY(-1.5rem);
+            }
+
+            100% {
+                transform: translateY(0);
+                transform: rotate(90deg);
+            }
+        }
+
+        @keyframes spin1 {
+            25% {
+                transform: rotate(90deg) translate(30px, -10px) scaleX(1);
+            }
+            100% {
+                transform: rotate(90deg) translate(30px, -10px) scaleX(2);
+            }
+        }
+
+        @keyframes spin2 {
+            15% {
+                transform: rotate(0deg) translate(0px) scaleY(1);
+            }
+            50% {
+                transform: rotate(90deg) translate(10px, 30px) scaleY(1);
+            }
+            100% {
+                transform: rotate(90deg) translate(10px, 30px) scaleY(2);
+            }
+        }
+
+        @keyframes spin3 {
+            40% {
+                transform: rotate(0deg) translate(0px) scaleX(1);
+            }
+            75% {
+                transform: rotate(90deg) translate(-30px, 10px) scaleX(1);
+            }
+            100% {
+                transform: rotate(90deg) translate(-30px, 10px) scaleX(2);
+            }
+        }
+
+        @keyframes spin4 {
+            65% {
+                transform: rotate(0deg) translate(0px) scaleY(1);
+            }
+            100% {
+                transform: rotate(90deg) translate(-10px, -30px) scaleY(2);
+            }
+        }
+
+    </style>
 </head>
-<body onload="loadPageContent('home')">
-    <header>
-        <div class="header-item left-collapse-btn">
-            <span class="icon material-symbols-outlined">Apps</span>
-            <span class="tooltip" role="tooltip">Menu</span>
+<body>
+    <div class="container">
+        <div class="loading">
+            <span class="shape shape-1"></span>
+            <span class="shape shape-2"></span>
+            <span class="shape shape-3"></span>
+            <span class="shape shape-4"></span>
         </div>
-        <div class="header-item">
-            <a class="location line" href="./index.html" target="_self">Encrypted</a>
-        </div>
-        <div class="header-item search">
-            <form class="search-form" id="search-form">
-                <label for="search-form">
-                    <button class="search-icon" type="submit">
-                        <span class="icon material-symbols-outlined">Manage_Search</span>
-                    </button>
-                    <input class="search-input" type="text" placeholder="Search blog articles">
-                    <button class="search-close" type="reset">
-                        <span class="icon material-symbols-outlined">Close</span>
-                    </button>
-                    <div class="search-background"></div>
-                </label>
-            </form>
-        </div>
+        <p>Decrypting data...<span class="multiple-dot"></span></p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+                document.querySelector(".container").classList.add("container-hide");
+            }, 5000);
         
-        <div class="header-item messages">
-            <span class="icon material-symbols-outlined">Edit_Square</span>
-            <span class="tooltip" role="tooltip">Compose</span>
-        </div>
-
-        <div class="header-item notifications">
-            <span class="icon material-symbols-outlined">Notifications</span>
-            <span class="tooltip" role="tooltip">Notifications</span>
-        </div>
-        <div class="header-item help">
-            <span class="icon material-symbols-outlined">Help</span>
-            <span class="tooltip" role="tooltip">Help</span>
-        </div>
-        <div class="header-item account">
-            <img class="account-avatar" src="avatar_pfp.jpg" alt="avatar_logo">
-            <span class="tooltip" role="tooltip">Account</span>
-        </div>
-    </header>
-
-    <main>
-        <section>
-            <aside class="left-menu">
-                <article data-target="home">
-                    <h1 class="line">Dashboard</h1>
-                </article>
-                <article data-target="about">
-                    <p class="line upper">About</p>
-                </article>
-            </aside>
-            
-            <aside class="right-content"></aside>
-    
-        </section>
-    </main>
-
+        setTimeout(function() {
+            window.location.href = "dashboard.html";
+        }, 6000);
+    </script>
 </body>
 </html>
