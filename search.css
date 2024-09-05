@@ -65,6 +65,7 @@ label {
 .search-input::placeholder {
     color: var(--clr-min-lt);
     font-family: 'Garamond', sans-serif;
+    font-size: var(--sz-base);
     font-weight: 500;
 }
 
