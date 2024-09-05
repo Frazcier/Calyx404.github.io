@@ -13,23 +13,21 @@
 
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="script.js"></script>
-    <script class="target-script" src=""></script>
 </head>
-<body>
+<body onload="loadPageContent('home')">
     <header>
         <div class="header-item left-collapse-btn">
             <span class="icon material-symbols-outlined">Apps</span>
             <span class="tooltip" role="tooltip">Menu</span>
         </div>
         <div class="header-item">
-            <a class="location" href="./index.html" target="_self">Dashboard</a>
+            <a class="location line" href="./index.html" target="_self">Encrypted</a>
         </div>
         <div class="header-item search">
             <form class="search-form" id="search-form">
                 <label for="search-form">
                     <button class="search-icon" type="submit">
                         <span class="icon material-symbols-outlined">Manage_Search</span>
-                        <span class="tooltip" role="tooltip">Search</span>
                     </button>
                     <input class="search-input" type="text" placeholder="Search blog articles">
                     <button class="search-close" type="reset">
@@ -62,39 +60,15 @@
     <main>
         <section>
             <aside class="left-menu">
-                <article>
-                    <h1 data-content="home"><span>Encrypted.</span></h1>
-                    <p data-content="about"><span>About Us</span></p>
+                <article data-target="home">
+                    <h1 class="line">Dashboard</h1>
+                </article>
+                <article data-target="about">
+                    <p class="line upper">About</p>
                 </article>
             </aside>
             
-            <aside class="right-content">
-                <article data-content="article_01">
-                    <h1>The Art of Connection</h1>
-                    <p><span>By Jovic Acyapas</span></p>
-                </article>
-        
-                <article data-content="article_02">
-                    <h1>Beyond the Obstacle</h1>
-                    <p><span>By Jared Peralta</span></p>
-                </article>
-        
-                <article data-content="article_03">
-                    <h1>Growth Unlock</h1>
-                    <p><span>By Kochina Batan</span></p>
-                </article>
-        
-                <article data-content="article_04">
-                    <h1>Collaboration Magic</h1>
-                    <p><span>By Raymond Agustin</span></p>
-                </article>
-        
-                <article data-content="article_05">
-                    <h1>Teamwork Triumphs</h1>
-                    <p><span>By Rheniel Bay-an</span></p>
-                </article>
-                
-            </aside>
+            <aside class="right-content"></aside>
     
         </section>
     </main>
