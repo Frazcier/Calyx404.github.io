@@ -4,8 +4,27 @@ $(document).ready(function () {
     });
 
     triggerSearch();
+    scrollReveal();
+
 });
 
+function scrollReveal () {
+    ScrollReveal({
+        reset: true,
+        distance: '80px',
+        duration: 2000,
+        // delay: 500
+    });
+    
+    ScrollReveal().reveal('.top', { origin: 'top'});
+    ScrollReveal().reveal('.left', { origin: 'left'});
+    ScrollReveal().reveal('.right', { origin: 'right'});
+
+    $.each($(".bottom"), function () {
+        ScrollReveal().reveal(this, $(this).data(), {origin:'bottom'});
+    });
+}
+ 
 function triggerSearch () {
 
     $(".search-close").click(function () {
