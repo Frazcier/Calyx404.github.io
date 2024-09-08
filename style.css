@@ -94,7 +94,7 @@ hr {
     background-color: var(--clr-min-lt);
     border: none;
     width: 100%;
-    margin: 1rem 0;
+    margin: 4rem 0;
 }
 
 .hint:hover + .flag{
@@ -310,12 +310,15 @@ section.blog-article {
     line-height: 1.8;
     padding: 0 var(--sz-milli);
     font-size: var(--sz-base);
+    margin-top: var(--sz-base);
 
     & h2 {
+        font-size: var(--sz-h5);
         margin: 1rem 0;
     }
 
     & h3 {
+        font-size: var(--sz-h6);
         margin: 0 0 0.5rem 0;
         text-indent: var(--sz-h1);
 
@@ -324,15 +327,29 @@ section.blog-article {
             margin: 0 0 2rem 0;
         }
     }
+    
+    & ol {
+        
+        & li {
+            margin: 0 0 0.5rem 0;
+            font-size: var(--sz-h6);
+            font-weight: 600;
+            list-style-type:upper-alpha;
+        }
+    }
 
     & p {
         text-indent: var(--sz-h1);
         text-align: justify;
         margin: 0 0 1rem 0;
-        padding: 0 0.75rem;
+    }
+
+    & .about-description {
+        line-height: 3.0;
     }
 
     & .feedback-form {
+        margin-bottom: 3rem;
 
         & label {
             width: 100%;
