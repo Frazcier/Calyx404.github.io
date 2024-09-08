@@ -3,7 +3,7 @@
 .search-form {
     display: flex;
     align-items: center;
-    width: 75%;
+    width: 40vw;
     height: var(--sz-h1);
     position: relative;
 }
