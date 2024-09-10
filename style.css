@@ -86,7 +86,8 @@ h1 {
         transition: all 0.25s ease-out;
     }
     
-    &:hover::after {
+    &:hover::after,
+    &:focus::after {
         width: 100%;
       }
 }
@@ -96,7 +97,7 @@ hr {
     background-color: var(--clr-min-lt);
     border: none;
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .hint:hover + .flag{
@@ -132,6 +133,7 @@ hr {
     color: var(--clr-min-lt);
     transition: var(--trsn-base);
     aspect-ratio: 1;
+    transform: scale(1);
     text-align: center;
     transition: var(--trsn-base);
     font-variation-settings:
@@ -140,10 +142,15 @@ hr {
         'GRAD' 0,
         'opsz' 24;
     
-    &:hover {
+    &:hover,
+    &:focus {
         color: var(--clr-min-dk) !important;
         font-variation-settings:
         'FILL' 1;
+    }
+
+    &:active {
+        transform: scale(0.8);
     }
 }
 
@@ -196,7 +203,8 @@ header {
             }
         }
 
-        &:hover > .tooltip {
+        &:hover > .tooltip,
+        &:focus > .tooltip {
                 visibility: visible;
                 opacity: 1;
                 transform: translateY(0);
@@ -268,7 +276,8 @@ section.dashboard {
     padding-right: var(--sz-base);
     scrollbar-gutter: stable both-edges;
 
-    &:hover {
+    &:hover,
+    &:focus {
         overflow-y: auto;
     }
 
@@ -318,7 +327,8 @@ section.blog-article {
         text-decoration: none;
         color: var(--clr-min-dk);
 
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: 1px underline;
         }
     }
@@ -353,6 +363,23 @@ section.blog-article {
         text-indent: var(--sz-h1);
         text-align: justify;
         margin: 0 0 1rem 0;
+    }
+
+    & .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .toggle {
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+    }
+    
+    & .dropdown-content {
+        display: none;
     }
 
     & .reference-item {
@@ -493,7 +520,8 @@ footer {
             }
         }
 
-        &:hover > .tooltip {
+        &:hover > .tooltip,
+        &:focus > .tooltip {
                 visibility: visible;
                 opacity: 1;
                 transform: translateY(10%);

@@ -8,15 +8,22 @@
 <body>
     <article class="bottom" data-delay="100" data-target="about">
         <h1>About Encrypted</h1>
-        <h3 class="upper" style="margin-bottom: 0 !important;"><span class="hint">Unlock</span> what's hidden in plain sight.<span class="flag">[Y21kOiBjdXJsIEFTQ0lJLmxpdmUvY2FuLXlvdS1oZWFyLW1l]</span></h3>
+        <h3 class="upper" style="font-weight: 400; font-size: var(--sz-base);"><span class="hint">Unlock</span> what's hidden in plain sight.<span class="flag">[Y21kOiBjdXJsIEFTQ0lJLmxpdmUvY2FuLXlvdS1oZWFyLW1l]</span></h3>
     </article>
 
-    <section class="blog-article bottom" data-duration="3000" style="padding-top: 7rem;">
-        <hr>
+    <section class="blog-article bottom" data-duration="3000">
         <p class="about-description"><strong>Encrypted</strong> is your go-to source for exploring the ever-evolving convergence of information technology and education. <strong>Our mission</strong> is to bridge the gap between technological advancements and their impact on learning, providing insights, updates, and ethical reflections on how the digital era shapes the future of education.</p>
+        
         <hr>
-        <h2>The Authors</h2>
-            <h3>Jovic Acyapas</h3>
+
+        <div class="dropdown">
+            <h2>The Authors</h2>
+            <button class="toggle" onclick="dropdownToggle('authors')">
+                <span class="icon material-symbols-outlined">Arrow_Drop_Down_Circle</span>
+            </button>
+        </div>
+        <div class="dropdown-content authors">
+        <h3>Jovic Acyapas</h3>
                 <p>Jovic is a first-year IT student with a focus on the practical applications of technology in education. Interested in the integration of AI tools in learning environments, Jovic is particularly focused on how to ethically implement these technologies without compromising the human touch. Jovic's analytical skills and enthusiasm for innovation drive their contributions to the blog.</p>
             <h3>Raymond Agustin</h3>
                 <p>Raymond is a freshman IT student with a keen interest in the intersection of technology and education. Passionate about exploring how technological advancements impact learning environments, Raymond is dedicated to understanding the ethical dimensions of AI in the classroom. With a background in computer science fundamentals, Raymond is excited to delve into the future of tech-driven education.</p>
@@ -26,8 +33,17 @@
                 <p>Rheniel is a freshman studying IT with a strong interest in the societal impacts of technology. Rheniel's contributions to the blog reflect a deep concern for how technology affects access to education, particularly for underrepresented groups. Rheniel is dedicated to exploring ways to bridge the digital divide and enhance opportunities for all students.</p>
             <h3>Jared Peralta</h3>
                 <p>Jared is a freshman in the IT program who is passionate about the evolving role of technology in education. With a strong foundation in coding and a curiosity about educational technology, Jared explores how tech advancements, including AI, can be balanced with traditional teaching methods. Jared is committed to understanding and addressing the ethical implications of new technologies in education.</p>
+        </div>
+
         <hr>
-        <h2>Join the Conversation</h2>
+
+        <div class="dropdown">
+            <h2>Join the Conversation</h2>
+            <button class="toggle" onclick="dropdownToggle('feedback')">
+                <span class="icon material-symbols-outlined">Arrow_Drop_Down_Circle</span>
+            </button>
+        </div>
+        <div class="dropdown-content feedback">
             <p>Have an idea or topic you would like us to explore? Reach out! We value collaboration and are always open to hearing new perspectives from our readers.</p>
             <form class="feedback-form">
                 <label for="feedback-form">
@@ -37,8 +53,10 @@
                     </button>
                 </label>
             </form>
+        </div>
+
         <hr>
-        <p style="text-align: right;">This site is created by <strong>Great Master Raymond Agustin</strong>.</p>
+        <p style="text-align: right;">This site is created by <strong>Great Master Calyxo</strong>.</p>
     </section>
 
     <script src="script.js"></script>

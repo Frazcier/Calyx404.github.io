@@ -8,6 +8,10 @@ $(document).ready(function () {
 
 });
 
+function dropdownToggle (content) {
+    $("." + content).toggle();
+}
+
 function scrollReveal () {
     ScrollReveal({
         reset: true,
