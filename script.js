@@ -15,7 +15,7 @@ function dropdownToggle (content) {
 function scrollReveal () {
     ScrollReveal({
         reset: true,
-        distance: '80px',
+        distance: '100px',
         duration: 2000,
         // delay: 500
     });
